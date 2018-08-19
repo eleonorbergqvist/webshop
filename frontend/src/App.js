@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import WebshopContainer from './Containers/WebshopContainer';
+import HomeContainer from './containers/HomeContainer';
 import './App.css';
 
 class App extends Component {
@@ -8,17 +8,17 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route path="/" component={WebshopContainer} />
-          <Route path="/login" compontent={WebshopContainer} />
-          <Route path="/logout" compontent={WebshopContainer} />
-          <Route path="/register" compontent={WebshopContainer} />
-          <Route path="/admin/login" compontent={WebshopContainer} />
-          <Route path="/admin/dashboard" compontent={WebshopContainer} />
-          <Route path="/checkout" compontent={WebshopContainer} />
-          <Route path="/mypages" compontent={WebshopContainer} />
-          <Route path="/mypages" compontent={WebshopContainer} />
-          <Route path="/products" compontent={WebshopContainer} />
-          <Route path="/product/:id" component={WebshopContainer} />
+          <Route path="/" component={HomeContainer} />
+          <Route path="/login" compontent={HomeContainer} />
+          <Route path="/logout" compontent={HomeContainer} />
+          <Route path="/register" compontent={HomeContainer} />
+          <Route path="/admin/login" compontent={HomeContainer} />
+          <Route path="/admin/dashboard" compontent={HomeContainer} />
+          <Route path="/checkout" compontent={HomeContainer} />
+          <Route path="/mypages" compontent={HomeContainer} />
+          <Route path="/mypages" compontent={HomeContainer} />
+          <Route path="/products" compontent={HomeContainer} />
+          <Route path="/product/:id" component={HomeContainer} />
         </Switch>
       </div>
     );
