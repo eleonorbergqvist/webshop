@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class WebbshopContainer extends Component {
+class HomeContainer extends Component {
   render() {
     return (
       <div>
-        <p>WebbshopContainer</p>
+        <p>HomeContainer</p>
       </div>
     );
   }
 }
 
-export default WebbshopContainer;
+export default HomeContainer;
