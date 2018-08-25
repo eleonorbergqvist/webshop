@@ -7,8 +7,6 @@ import ProductListContainer from './containers/ProductListContainer';
 import ProductDetailContainer from './containers/ProductDetailContainer';
 import './App.css';
 
-console.log(LoginContainer);
-
 class App extends Component {
   render() {
     return (

@@ -1,0 +1,12 @@
+.NavbarBottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+
+  border-bottom: 0.5px solid #b69f58;
+}
+
+.NavbarBottom__Icon {
+  height: 40px;
+  width: auto;
+}

@@ -1,0 +1,18 @@
+.ProductDetail {
+}
+
+.ProductDetail__Image {
+  height: 200px;
+  width: auto;
+}
+
+.ProductDetail__Description {
+}
+
+.ProductDetail__Select {
+}
+
+.ProductDetail__Add {
+  height: 40px;
+  width: auto;
+}

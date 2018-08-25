@@ -1,0 +1,31 @@
+
+{
+  "id": 1,
+  "name": "Racingsele",
+  "images": ["nikolay-tchaouchev-785322-unsplash.jpg", "the-poodle-gang-369916-unsplash.jpg", "yuki-dog-485187-unsplash.jpg"],
+  "description": "lalalalala",
+  "attributes": {"color": "red"},
+  "category" :  "selar",
+  "price": 200,
+  "weight": 5,
+  "vat": 25,
+  "options":
+  [
+    {
+      "id": 1,
+      "label": "S",
+      "quantity": 0
+    },
+    {
+      "id": 2,
+      "label": "M",
+      "quantity": 20
+    },
+    {
+      "id": 3,
+      "label": "L",
+      "quantity": 20
+    }
+  ]
+}
+

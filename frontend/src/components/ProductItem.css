@@ -1,0 +1,85 @@
+.FeaturedImage {
+  height: 100px;
+  width: auto;
+}
+
+.ProductItem__Button {
+  height: 40px;
+  width: auto;
+}
+
+.ListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 10px 10px;
+  border-bottom: 0.5px solid #eee;
+  text-decoration: none;
+}
+
+.ListItem__ColTime {
+}
+
+.ListItem__Time {
+  font-size: 15px;
+  color: #202020;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 38px;
+}
+
+.ListItem__ColTitle {
+  text-align: left;
+}
+
+.ListItem__Title {
+  font-size: 20px;
+  color: #202020;
+  font-weight: lighter;
+  margin: 15px 0 20px 0;
+}
+
+.ListItem__RatingsIcon {
+  margin-right: 5px;
+}
+
+.ListItem__RatingsCount {
+  display: inline;
+  font-size: 11px;
+  color: #666666;
+  font-weight: lighter;
+}
+
+.ListItem__Address {
+  font-size: 15px;
+  color: #666666;
+  font-weight: lighter;
+  margin: 5px 0 5px 0;
+}
+
+.ListItem__ColPrice {
+  text-align: right;
+}
+
+.ListItem__Price {
+  font-size: 15px;
+  color: #202020;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.ListItem__Mins {
+  font-size: 13px;
+  color: #666666;
+  font-weight: lighter;
+  margin-top: 0;
+}
+
+.ListItem__ColButton {
+}
+
+.ListItem__Button {
+  height: 20px;
+  width: 100%;
+}

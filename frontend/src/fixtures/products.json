@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "name": "Racingsele",
+    "images": [
+      "nikolay-tchaouchev-785322-unsplash.jpg",
+      "the-poodle-gang-369916-unsplash.jpg",
+      "yuki-dog-485187-unsplash.jpg"
+    ],
+    "description": "lalalalala",
+    "attributes": { "color": "red" },
+    "category": "selar",
+    "price": 200,
+    "weight": 5,
+    "vat": 25,
+    "options": [
+      {
+        "size": "S",
+        "quantity": 20
+      },
+      {
+        "size": "M",
+        "quantity": 20
+      },
+      {
+        "size": "L",
+        "quantity": 20
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Mössa",
+    "images": [
+      "nikolay-tchaouchev-785322-unsplash.jpg",
+      "the-poodle-gang-369916-unsplash.jpg",
+      "yuki-dog-485187-unsplash.jpg"
+    ],
+    "description": "lalalalala",
+    "attributes": { "color": "blue" },
+    "category": "hattar",
+    "price": 200,
+    "weight": 5,
+    "vat": 25,
+    "options": [
+      {
+        "size": "S",
+        "quantity": 20
+      },
+      {
+        "size": "M",
+        "quantity": 20
+      },
+      {
+        "size": "L",
+        "quantity": 20
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Halsband",
+    "images": [
+      "nikolay-tchaouchev-785322-unsplash.jpg",
+      "the-poodle-gang-369916-unsplash.jpg",
+      "yuki-dog-485187-unsplash.jpg"
+    ],
+    "description": "lalalalala",
+    "attributes": { "color": "green" },
+    "category": "halsband",
+    "price": 200,
+    "weight": 5,
+    "vat": 25,
+    "options": [
+      {
+        "size": "S",
+        "quantity": 20
+      },
+      {
+        "size": "M",
+        "quantity": 20
+      },
+      {
+        "size": "L",
+        "quantity": 20
+      }
+    ]
+  }
+]
