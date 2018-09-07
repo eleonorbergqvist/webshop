@@ -5,6 +5,7 @@ import LoginContainer from './containers/LoginContainer';
 import RegisterContainer from './containers/RegisterContainer';
 import ProductListContainer from './containers/ProductListContainer';
 import ProductDetailContainer from './containers/ProductDetailContainer';
+import ShoppingCartContainer from './containers/ShoppingCartContainer';
 import './App.css';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
           <Route path="/products" component={ProductListContainer} />
           <Route path="/product/:id" component={ProductDetailContainer} />
           <Route path="/checkout" component={HomeContainer} />
+          <Route path="/shoppingcart" component={ShoppingCartContainer} />
           <Route path="/mypages" component={HomeContainer} />
           <Route path="/mypages" component={HomeContainer} />
 
