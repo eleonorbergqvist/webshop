@@ -2,8 +2,7 @@ import React from 'react';
 import CartPlus from '../images/cart-plus.svg';
 import './ProductDetail.css';
 
-const ProductDetail = ({ images, description, options }) => {
-  console.log(description);
+const ProductDetail = ({ images, description, options, onAddToCartClick }) => {
   return (
     <div>
       <h2>Name</h2>
@@ -23,7 +22,12 @@ const ProductDetail = ({ images, description, options }) => {
           );
         })}
       </select>
-      <img className="ProductDetail__Add" src={CartPlus} alt="" />
+      <img
+        className="ProductDetail__Add"
+        src={CartPlus}
+        alt=""
+        onClick={onAddToCartClick}
+      />
     </div>
   );
 };

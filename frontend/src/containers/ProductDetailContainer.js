@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import NavbarTop from '../components/NavbarTop';
 import NavbarBottom from '../components/NavbarBottom';
 import ProductDetail from '../components/ProductDetail';
+import { simpleAction } from '../actions/simpleAction';
+import { addToCart } from '../actions/addToCart';
+
+const isObjectEmpty = x => Object.keys(x).length === 0;
 
 class ProductDetailContainer extends Component {
   state = {
@@ -18,19 +23,53 @@ class ProductDetailContainer extends Component {
       });
   }
 
+  handleButtonClick = _e => {
+    console.log('HEJHEJ');
+
+    this.props.simpleAction(Math.random());
+  };
+
+  handleCartButtonClick = _e => {
+    const { product } = this.state;
+
+    this.props.addToCart(product);
+  };
+
   render() {
     const { product } = this.state;
 
     return (
       <div>
         <NavbarTop />
-        {!isObjectEmpty(product) && <ProductDetail {...product} />}
+
+        <button onClick={this.handleButtonClick}>Kör!</button>
+
+        <h1>Bobby {this.props.name}</h1>
+        {!isObjectEmpty(product) && (
+          <ProductDetail
+            {...product}
+            onAddToCartClick={this.handleCartButtonClick}
+          />
+        )}
         <NavbarBottom />
       </div>
     );
   }
 }
 
-const isObjectEmpty = x => Object.keys(x).length === 0;
+const mapStateToProps = state => {
+  return {
+    name: state.simpleReducer.name,
+    products: state.cartReducer.products
+  };
+};
 
-export default ProductDetailContainer;
+const mapDispatchToProps = dispatch => ({
+  simpleAction: name => dispatch(simpleAction(name)),
+  addToCart: product => dispatch(addToCart(product))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ProductDetailContainer);

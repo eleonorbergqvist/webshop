@@ -1,8 +1,9 @@
-export default (state = {}, action) => {
+export default (state = { name: 'gurkan' }, action) => {
   switch (action.type) {
     case 'SIMPLE_ACTION':
+      console.log(action);
       return {
-        result: action.payload
+        name: action.payload.name
       };
     default:
       return state;
