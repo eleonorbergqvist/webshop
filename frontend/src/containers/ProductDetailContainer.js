@@ -10,7 +10,8 @@ const isObjectEmpty = x => Object.keys(x).length === 0;
 
 class ProductDetailContainer extends Component {
   state = {
-    product: {}
+    product: {},
+    selectedChoiceId: ''
   };
 
   componentDidMount() {
@@ -23,20 +24,26 @@ class ProductDetailContainer extends Component {
       });
   }
 
-  handleButtonClick = _e => {
-    console.log('HEJHEJ');
-
+  handleButtonClick = e => {
     this.props.simpleAction(Math.random());
   };
 
-  handleCartButtonClick = _e => {
-    const { product } = this.state;
+  handleCartButtonClick = e => {
+    const { product, selectedChoiceId } = this.state;
+    let option = product.options.filter(x => x.id === selectedChoiceId);
+    option = option.length > 0 ? option[0] : null;
 
-    this.props.addToCart(product);
+    this.props.addToCart({ product: product, option: option });
+  };
+
+  handleChoiceChange = id => {
+    this.setState({
+      selectedChoiceId: id
+    });
   };
 
   render() {
-    const { product } = this.state;
+    const { product, selectedChoiceId } = this.state;
 
     return (
       <div>
@@ -48,7 +55,9 @@ class ProductDetailContainer extends Component {
         {!isObjectEmpty(product) && (
           <ProductDetail
             {...product}
+            selectedChoiceId={selectedChoiceId}
             onAddToCartClick={this.handleCartButtonClick}
+            onChoiceChange={this.handleChoiceChange}
           />
         )}
         <NavbarBottom />

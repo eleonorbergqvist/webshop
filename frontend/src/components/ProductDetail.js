@@ -2,7 +2,19 @@ import React from 'react';
 import CartPlus from '../images/cart-plus.svg';
 import './ProductDetail.css';
 
-const ProductDetail = ({ images, description, options, onAddToCartClick }) => {
+const ProductDetail = ({
+  images,
+  description,
+  options,
+  selectedChoiceId,
+  onAddToCartClick,
+  onChoiceChange
+}) => {
+  const handleOnChange = e => {
+    const id = Number(e.target.value);
+    onChoiceChange(id);
+  };
+
   return (
     <div>
       <h2>Name</h2>
@@ -12,7 +24,12 @@ const ProductDetail = ({ images, description, options, onAddToCartClick }) => {
         alt=""
       />
       <p className="ProductDetail__Description">{description}</p>
-      <select className="ProductDetail__Select">
+
+      <select
+        className="ProductDetail__Select"
+        onChange={handleOnChange}
+        value={selectedChoiceId}
+      >
         {options.map(x => {
           const inStock = x.quantity > 0;
           return (

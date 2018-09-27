@@ -4,10 +4,14 @@ const ShoppingCart = ({ products }) => {
   return (
     <div>
       <h2>Shopping cart:</h2>
-      <p>{products.length}</p>
+      <p>Varor: {products.length}</p>
       <ul>
-        {products.map(x => {
-          return <li key={x.id}>{x.name}</li>;
+        {products.map(({ product, option }, index) => {
+          return (
+            <li key={index}>
+              {product.name} ({option.label})
+            </li>
+          );
         })}
       </ul>
     </div>
